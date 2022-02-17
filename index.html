@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment</title>
+    <title>Advanced CSS - Assignment 1</title>
+    <style>
+        a[href^="https://www.google.com"]{
+            color: green;
+        }
+        a[href^="https://www.link-group.eu/"]{
+            color: red;
+        }
+        p:nth-last-of-type(4){
+            color: blue;
+        }
+        p:nth-last-child(5){
+            color: red;
+        }
+        p:nth-child(4){
+            color: red;
+        }
+        p:nth-of-type(1):after{
+            content: " NEW";
+            color: yellow;
+        }
+        p:nth-of-type(3):hover{
+            font-style: italic;
+        }
+
+
+    </style>
 </head>
+
 <body>
-    <form>
-        Primul numar: <input type="text" id="firstNumber"/> <br><br>
-        Al doilea numar: <input type="text" id="secondNumber"/> <br><br>
-        <input type="button" onclick="additionBy()" value="Addition"/>
-        <input type="button" onclick="substractionBy()" value="Substraction"/>
-        <input type="button" onclick="multiplyBy()" value="Multiply"/>
-        <input type="button" onclick="divideBy()" value="Divide"/>
-
-    </form>
-    <p>The result is:
-        <span id="result"></span>
-    </p>
-
-    <script>
-        function additionBy(){
-            num1 = document.getElementById("firstNumber").value;
-            num2 = document.getElementById("secondNumber").value;
-            document.getElementById("result").innerHTML = parseInt(num1) + parseInt(num2);
-        }
-
-        function  substractionBy(){
-            num1 = document.getElementById("firstNumber").value;
-            num2 = document.getElementById("secondNumber").value;
-            document.getElementById("result").innerHTML = parseInt(num1) - parseInt(num2);
-        }
-
-        function multiplyBy(){
-            num1 = document.getElementById("firstNumber").value;
-            num2 = document.getElementById("secondNumber").value;
-            document.getElementById("result").innerHTML = num1 * num2;
-        }
-
-        function divideBy(){
-            num1 = document.getElementById("firstNumber").value;
-            num2 = document.getElementById("secondNumber").value;
-            document.getElementById("result").innerHTML = num1 / num2;
-        }
-    </script>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <div id="first-div">
+        <h2>Subheading</h2>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div id="second-div">
+            <h3>Sub subheading</h3>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
+        </div>
+    </div>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
 </body>
+
 </html>
